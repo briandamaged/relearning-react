@@ -1,0 +1,11 @@
+FROM node:17
+
+RUN apt-get -y update && \
+    apt-get -y install \
+      git \
+      less \
+      vim
+
+WORKDIR /usr/src/app
+
+USER node
