@@ -1,4 +1,8 @@
-FROM node:17
+# FYI: Had to downgrade to Node 16 due to the following bug:
+#
+#        https://github.com/facebook/create-react-app/issues/11565
+#
+FROM node:16
 
 RUN apt-get -y update && \
     apt-get -y install \
